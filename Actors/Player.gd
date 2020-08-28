@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 
-var speed = Vector2(800, 1000)
-var gravity = 3000
+var speed = Vector2(400, 300)
+var gravity = 1000
 
 func _physics_process(_delta):
 	var isJumpInterrupted = Input.is_action_just_released("move_jump") and velocity.y < 0.0
