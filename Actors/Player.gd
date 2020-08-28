@@ -19,11 +19,11 @@ func getMoveVector():
 
 
 func calculate_move_velocity(
-		linearVelocity: Vector2, moveVector: Vector2, speed: Vector2, isJumpInterrupted: bool
+		linearVelocity: Vector2, moveVector: Vector2, moveSpeed: Vector2, isJumpInterrupted: bool
 	) -> Vector2:
-	var out = Vector2(speed.x * moveVector.x, linearVelocity.y + gravity * get_physics_process_delta_time())
+	var out = Vector2(moveSpeed.x * moveVector.x, linearVelocity.y + gravity * get_physics_process_delta_time())
 	if moveVector.y < 0:
-		out.y = speed.y * moveVector.y
+		out.y = moveSpeed.y * moveVector.y
 	if isJumpInterrupted:
 		out.y = 0
 	return out
