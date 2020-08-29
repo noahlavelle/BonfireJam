@@ -46,6 +46,7 @@ func _on_Anim_animation_finished(anim_name):
 	player.set_collision_mask(2 + passThroughLayer)
 	
 	get_tree().paused = false
+	player.velocity = Vector2.ZERO
 
 
 func _on_Area2D_body_entered(body):
