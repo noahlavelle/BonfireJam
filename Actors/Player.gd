@@ -31,6 +31,8 @@ func calculate_move_velocity(
 func handleAnimations(moveVector):
 	if moveVector.y != 0 and not is_on_floor():
 		$AnimatedSprite.animation = "jump"
+		if moveVector.x != 0:
+			$AnimatedSprite.flip_h = clamp(moveVector.x * -1, 0, 1)
 		return
 	if moveVector.x == 0:
 		$AnimatedSprite.animation = "idle"
