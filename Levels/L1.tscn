@@ -416,7 +416,7 @@ position = Vector2( 132, 492 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="Statue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 178.247, 291.577 )
+position = Vector2( 180, 516 )
 
 [node name="PFG" type="ParallaxBackground" parent="."]
 layer = 0
