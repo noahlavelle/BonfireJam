@@ -6,6 +6,7 @@ var player_in_area = false
 export var speed = Vector2(300, 300)
 export var gravity = 1000
 export var passThroughLayer = 3
+export var modHex = "#ffffff"
 
 
 var Statue = preload("res://Objects/Statue.tscn")
@@ -38,13 +39,14 @@ func _on_Anim_animation_finished(anim_name):
 	player.get_node("AnimationPlayer").play("FadeOut")
 	yield(get_tree().create_timer(0.3), "timeout")
 	player.global_position = Vector2(position.x + 40, position.y - 30)
-	player.get_node("AnimationPlayer").play("FadeIn")
-	yield(get_tree().create_timer(0.3), "timeout")
 	
 	player.speed = speed
 	player.gravity = gravity
 	player.set_collision_mask(2 + passThroughLayer)
 	
+	player.get_node("AnimationPlayer").play("FadeIn")
+	yield(get_tree().create_timer(0.3), "timeout")
+	player.get_node("AnimatedSprite").modulate = modHex
 	get_tree().paused = false
 	player.velocity = Vector2.ZERO
 
