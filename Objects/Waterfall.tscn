@@ -31,8 +31,9 @@ animations = [ {
 } ]
 
 [node name="Waterfall" type="Node2D"]
+z_index = 2
 
 [node name="Water" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
