@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Logo.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/ground.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fonts/MenuButton.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Music.tscn" type="PackedScene" id=7]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource( 3 )
@@ -33,6 +34,9 @@ smoothing_speed = 10.0
 
 [node name="Transition" parent="Camera2D/CanvasLayer" instance=ExtResource( 6 )]
 script = null
+
+[node name="ColorRect" parent="Camera2D/CanvasLayer/Transition/CanvasLayer" index="0"]
+visible = false
 
 [node name="TitleScreen" type="Control" parent="Camera2D/CanvasLayer"]
 anchor_right = 1.0
@@ -97,5 +101,9 @@ stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 7 )]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Continue" to="." method="_on_Continue_pressed"]
+
+[editable path="Camera2D/CanvasLayer/Transition"]
