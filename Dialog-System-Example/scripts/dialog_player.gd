@@ -22,9 +22,6 @@ func _ready():
 	
 	_Dialog_Box.visible = false
 	_SpaceBar_Icon.visible = false
-	
-	play_dialog("L1/Shrine")
-
 
 func _input(event):
 	if event is InputEventKey:

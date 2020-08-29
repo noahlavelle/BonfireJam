@@ -1,38 +1,101 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Title Screen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Logo.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Home Screen.gd" type="Script" id=3]
+[ext_resource path="res://Assets/ground.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fonts/MenuButton.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=6]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource( 3 )
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="MarginContainer" parent="CanvasLayer" instance=ExtResource( 1 )]
-margin_right = 324.0
-margin_bottom = 160.0
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 480, 0 )
 
-[node name="HBoxContainer" parent="CanvasLayer/MarginContainer" index="0"]
-margin_right = 604.0
-margin_bottom = 320.0
-
-[node name="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" index="0"]
-margin_bottom = 320.0
-
-[node name="CenterContainer" parent="CanvasLayer/MarginContainer/HBoxContainer" index="1"]
-margin_bottom = 320.0
-
-[node name="TextureRect2" parent="CanvasLayer/MarginContainer/HBoxContainer/CenterContainer" index="0"]
-margin_top = 90.0
-margin_bottom = 230.0
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 132 )
+texture = ExtResource( 4 )
+centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 160, 90 )
 current = true
 limit_smoothed = true
 smoothing_enabled = true
+smoothing_speed = 10.0
 
-[editable path="CanvasLayer/MarginContainer"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Transition" parent="Camera2D/CanvasLayer" instance=ExtResource( 6 )]
+script = null
+
+[node name="TitleScreen" type="Control" parent="Camera2D/CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Camera2D/CanvasLayer/TitleScreen"]
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 140.0
+margin_bottom = 68.0
+custom_fonts/font = ExtResource( 5 )
+text = "Put Your
+Soul
+into it"
+align = 1
+
+[node name="NewGame" type="Button" parent="Camera2D/CanvasLayer/TitleScreen"]
+margin_left = 12.0
+margin_top = 91.0
+margin_right = 142.0
+margin_bottom = 111.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/TitleScreen/NewGame"]
+margin_right = 72.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 5 )
+text = "NEW GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="Camera2D/CanvasLayer/TitleScreen"]
+margin_left = 12.0
+margin_top = 115.0
+margin_right = 142.0
+margin_bottom = 135.0
+flat = true
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/TitleScreen/Continue"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 5 )
+text = "CONTINUE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="Camera2D/CanvasLayer/TitleScreen"]
+margin_left = 152.0
+margin_top = -1.0
+margin_right = 312.0
+margin_bottom = 139.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Continue" to="." method="_on_Continue_pressed"]
