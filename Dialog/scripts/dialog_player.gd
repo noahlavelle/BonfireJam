@@ -21,7 +21,7 @@ func _ready():
 	var Story_Reader_Class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	_Story_Reader = Story_Reader_Class.new()
 	
-	var story = load("res://Dialog-System-Example/stories/Example_Story_Baked.tres")
+	var story = load("res://Dialog/stories/Story-Baked.tres")
 	_Story_Reader.read(story)
 	
 	_Dialog_Box.visible = false

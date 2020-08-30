@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_section_9patch.png-beceadcf40f205d430547faaab724953.stex"
+path="res://.import/menu_section_9patch.png-334aea1a568784bf7d5f85588265c006.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialog-System-Example/textures/menu_section_9patch.png"
-dest_files=[ "res://.import/menu_section_9patch.png-beceadcf40f205d430547faaab724953.stex" ]
+source_file="res://Dialog/textures/menu_section_9patch.png"
+dest_files=[ "res://.import/menu_section_9patch.png-334aea1a568784bf7d5f85588265c006.stex" ]
 
 [params]
 

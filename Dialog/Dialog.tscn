@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Dialog-System-Example/fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Dialog-System-Example/textures/menu_section_9patch.png" type="Texture" id=2]
-[ext_resource path="res://Dialog-System-Example/scripts/dialog_player.gd" type="Script" id=3]
+[ext_resource path="res://Dialog/fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Dialog/textures/menu_section_9patch.png" type="Texture" id=2]
+[ext_resource path="res://Dialog/scripts/dialog_player.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -81,7 +81,6 @@ margin_bottom = 27.0
 custom_fonts/font = SubResource( 1 )
 text = "This is where the dialog text is displayed.
 Press F6 to run this example. ^_^"
-valign = 1
 autowrap = true
 
 [node name="Body_AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]

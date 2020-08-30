@@ -9,7 +9,7 @@ export var modHex = "#ffffff"
 export var story = "L1/Shrine"
 
 var Statue = preload("res://Objects/Statue.tscn")
-var Dialog = preload("res://Objects/Dialog.tscn")
+var Dialog = preload("res://Dialog/Dialog.tscn")
 
 var dialog
 
