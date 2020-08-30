@@ -443,7 +443,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 12 )
-Level = 4
+Level = 6
 game_save_class = ExtResource( 13 )
 
 [node name="Waterfall" type="Node2D" parent="."]
@@ -471,7 +471,7 @@ position = Vector2( 344, 540 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
 position = Vector2( 344, 548 )
-frame = 2
+frame = 1
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -606,7 +606,7 @@ modHex = "#fd00ff"
 story = "none"
 
 [node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )

@@ -507,6 +507,9 @@ passThroughLayer = 7
 modHex = "ca07ec"
 story = "none"
 
+[node name="EKey" parent="Statue/Animation" index="3"]
+frame = 1
+
 [node name="Sprite" parent="Statue" index="1"]
 texture = ExtResource( 15 )
 
@@ -593,6 +596,9 @@ speed = Vector2( 600, 300 )
 modHex = "#000aff"
 story = "none"
 
+[node name="EKey" parent="Shrine2/Animation" index="3"]
+frame = 1
+
 [node name="Sprite" parent="Shrine2" index="1"]
 texture = ExtResource( 9 )
 
@@ -602,6 +608,9 @@ scale = Vector2( 0.7, 0.7 )
 speed = Vector2( 300, 500 )
 modHex = "#00ff1c"
 story = "none"
+
+[node name="EKey" parent="Shrine3/Animation" index="3"]
+frame = 1
 
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 16 )

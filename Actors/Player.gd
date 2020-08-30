@@ -12,6 +12,8 @@ func _ready():
 	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(soulLeft)
 
 func _physics_process(_delta):
+	if position.y > 572:
+		restart()
 	if Input.is_action_just_pressed("restart"):
 		restart()
 	var isJumpInterrupted = Input.is_action_just_released("move_jump") and velocity.y < 0.0
