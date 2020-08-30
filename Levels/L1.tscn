@@ -18,7 +18,7 @@
 [ext_resource path="res://Objects/UI.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/Camera2D.tscn" type="PackedScene" id=17]
 
-[sub_resource type="TileSet" id=35]
+[sub_resource type="TileSet" id=1]
 0/name = "WinFlag.png 0"
 0/texture = ExtResource( 14 )
 0/tex_offset = Vector2( 0, 0 )
@@ -62,12 +62,12 @@ z_index = 1
 
 [node name="Splash" parent="Waterfalls" instance=ExtResource( 11 )]
 position = Vector2( 328, 552 )
-frame = 2
+frame = 1
 
 [node name="Tilemaps" type="Node" parent="."]
 
 [node name="Details" type="TileMap" parent="Tilemaps"]
-tile_set = SubResource( 35 )
+tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1638401, 0, 0, 1703937, 0, 0, 1769473, 0, 0, 1835009, 0, 0 )

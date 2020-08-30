@@ -483,7 +483,7 @@ format = 1
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
 visible = true
-position = Vector2( 1170.75, 429.983 )
+position = Vector2( -20.8339, 324.143 )
 limit_left = 40
 limit_top = 325
 limit_right = 1978
@@ -491,7 +491,7 @@ limit_bottom = 325
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 modulate = Color( 0.992157, 1, 1, 1 )
-position = Vector2( 1170.75, 479.983 )
+position = Vector2( -20.8339, 374.143 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )
@@ -504,9 +504,6 @@ speed = Vector2( 300, 50 )
 gravity = 150
 modHex = "#ff4500"
 story = "none"
-
-[node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 0
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )
@@ -593,6 +590,9 @@ passThroughLayer = 4
 modHex = "#fd00ff"
 story = "none"
 
+[node name="EKey" parent="Shrine3/Animation" index="3"]
+frame = 0
+
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 18 )
 
@@ -600,6 +600,9 @@ texture = ExtResource( 18 )
 position = Vector2( 982.892, 475.784 )
 scale = Vector2( 0.7, 0.7 )
 story = "none"
+
+[node name="EKey" parent="Shrine2/Animation" index="3"]
+frame = 0
 
 [editable path="Shrine"]
 

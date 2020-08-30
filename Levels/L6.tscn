@@ -472,7 +472,7 @@ position = Vector2( 344, 540 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
 position = Vector2( 344, 548 )
-frame = 0
+frame = 1
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -588,6 +588,7 @@ __meta__ = {
 [node name="WinBox" parent="." instance=ExtResource( 15 )]
 position = Vector2( 192, 376 )
 rotation = 1.5708
+pathToScene = "res://Levels/L7.tscn"
 
 [node name="UI" parent="." instance=ExtResource( 16 )]
 
@@ -598,9 +599,6 @@ speed = Vector2( 300, -250 )
 gravity = -1000
 modHex = "#fd00ff"
 story = "none"
-
-[node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 0
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )
