@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Dialog="*res://Objects/Dialog.tscn"
+Music="*res://Objects/Music.tscn"
 
 [display]
 
@@ -35,7 +35,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "EXP-System-Dialog" )
 
 [importer_defaults]
 

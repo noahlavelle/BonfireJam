@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 TYPE = "EXP_Baked_Story"
 story = {
-3: {
+1: {
 "nodes": {
 1: {
 "links": {
@@ -19,25 +19,21 @@ story = {
 0: 3
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Fancy that! Another adventurer.
-When will they learn?</dialog>"
+<dialog>Fancy that! Another adventurer. When will they learn?</dialog>"
 },
 3: {
 "links": {
 0: 4
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Anyay. You seem to be stuck.
-For one of your soul shards I could put you into the
-body of a lost adventurer.
-</dialog>"
+<dialog>Anyway. You seem to be stuck. For one of your soul shards I could put you in the body of a lost adventurer.</dialog>"
 },
 4: {
 "links": {
 0: 5
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Maybe you'd have better luck then.</dialog>"
+<dialog>Maybe you'd have better luck then</dialog>"
 },
 5: {
 "links": {
@@ -56,5 +52,5 @@ body of a lost adventurer.
 }
 }
 names = {
-"L1/Shrine": 3
+"L1/Shrine": 1
 }

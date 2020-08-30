@@ -6,10 +6,14 @@ onready var _Dialog_Box = self.find_node("Dialog_Box")
 onready var _Speaker_LBL = self.find_node("Speaker_Label")
 onready var _SpaceBar_Icon = self.find_node("SpaceBar_NinePatchRect")
 
+var story
+
 var _did = 0
 var _nid = 0
 var _final_nid = 0
 var _Story_Reader
+
+signal dialogFinished
 
 # Virtual Methods
 
@@ -23,6 +27,7 @@ func _ready():
 	_Dialog_Box.visible = false
 	_SpaceBar_Icon.visible = false
 
+
 func _input(event):
 	if event is InputEventKey:
 		if event.pressed == true and event.scancode == KEY_SPACE:
@@ -32,8 +37,6 @@ func _input(event):
 
 func _on_Body_AnimationPlayer_animation_finished(anim_name):
 	_SpaceBar_Icon.visible = true
-
-
 func _on_Dialog_Player_pressed_spacebar():
 	if _is_waiting():
 		_SpaceBar_Icon.visible = false
@@ -63,9 +66,10 @@ func _is_waiting():
 
 func _get_next_node():
 	_nid = _Story_Reader.get_nid_from_slot(_did, _nid, 0)
-	
 	if _nid == _final_nid:
-		_Dialog_Box.visible = false
+		emit_signal("dialogFinished")
+		queue_free()
+		
 
 
 func _get_tagged_text(tag : String, text : String):

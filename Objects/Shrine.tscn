@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Objects/shrine.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Shrine.gd" type="Script" id=2]
-[ext_resource path="res://Assets/soul.png" type="Texture" id=3]
 [ext_resource path="res://Objects/E-key.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve" id=1]
@@ -53,10 +52,17 @@ script = ExtResource( 2 )
 [node name="Animation" type="Node2D" parent="."]
 pause_mode = 2
 
-[node name="Soul" type="Sprite" parent="Animation"]
+[node name="Soul" type="Line2D" parent="Animation"]
 visible = false
 position = Vector2( 0, -30 )
-texture = ExtResource( 3 )
+points = PoolVector2Array( 0.0286088, -0.000183105, 0.0384517, -0.010025 )
+width = 15.0
+default_color = Color( 1, 1, 1, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 30
+antialiased = true
 
 [node name="SoulParticles" type="Particles2D" parent="Animation"]
 position = Vector2( 0, -56 )

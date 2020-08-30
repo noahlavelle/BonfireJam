@@ -2,26 +2,35 @@ extends Node2D
 
 var player_in_area = false
 
-
 export var speed = Vector2(300, 300)
 export var gravity = 1000
 export var passThroughLayer = 3
 export var modHex = "#ffffff"
-
+export var story = "L1/Shrine"
 
 var Statue = preload("res://Objects/Statue.tscn")
+var Dialog = preload("res://Objects/Dialog.tscn")
+
+var dialog
 
 onready var player = get_tree().get_root().get_node("World/Player")
+
+func dialog():
+	dialog = Dialog.instance()
+	add_child(dialog)
+	dialog.get_node("Dialog_Box").visible = true
+	dialog.play_dialog(story)
+	get_tree().paused = true
+	dialog.connect("dialogFinished", self, "cutscene")
 
 func cutscene():
 	$Animation/Soul.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
 	$Animation/Soul.show()
 	$Animation/Anim.play("ScaleIn")
-	get_tree().paused = true
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("trade") and player_in_area:
-		cutscene()
+		dialog()
 	if player.global_position.x > global_position.x:
 		$Sprite.flip_h = false
 	else:

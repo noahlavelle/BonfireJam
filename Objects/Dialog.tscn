@@ -39,10 +39,10 @@ tracks/0/keys = {
 }
 
 [node name="Dialog_Player" type="CanvasLayer"]
+pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Dialog_Box" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -70,6 +70,9 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = -8.0
 margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Body_Label" type="Label" parent="Dialog_Box/Body_NinePatchRect/MarginContainer"]
 margin_top = 4.0
@@ -80,7 +83,6 @@ text = "This is where the dialog text is displayed.
 Press F6 to run this example. ^_^"
 valign = 1
 autowrap = true
-percent_visible = 0.0
 
 [node name="Body_AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
 autoplay = "TextDisplay"
