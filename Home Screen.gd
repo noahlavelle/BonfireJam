@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Node2D
 
 func _physics_process(delta):
 	position.x += 1
@@ -7,6 +7,7 @@ var current_level
 var save_profile = false
 
 func _ready():
+	$Camera2D/CanvasLayer/Transition/CanvasLayer/ColorRect.show()
 	var dir = Directory.new()
 	if not dir.file_exists('res://Saves/save.tres'):
 		$Camera2D/CanvasLayer/TitleScreen/Continue/Label.add_color_override("font_color", '646464')
