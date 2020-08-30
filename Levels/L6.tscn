@@ -472,7 +472,7 @@ position = Vector2( 344, 540 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
 position = Vector2( 344, 548 )
-frame = 1
+frame = 2
 
 [node name="Tilemaps" type="Node" parent="."]
 

@@ -483,15 +483,13 @@ format = 1
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
 visible = true
-position = Vector2( -20.8339, 324.143 )
+position = Vector2( -20.9688, 329.705 )
 limit_left = 40
-limit_top = 325
 limit_right = 1978
-limit_bottom = 325
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 modulate = Color( 0.992157, 1, 1, 1 )
-position = Vector2( -20.8339, 374.143 )
+position = Vector2( -20.9688, 379.705 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )

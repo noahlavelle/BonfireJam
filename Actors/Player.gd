@@ -6,6 +6,8 @@ var speed = Vector2(150, 300)
 var gravity = 1000
 var soulLeft
 
+onready var camera = get_parent().get_node("Camera2D")
+
 func _ready():
 	if get_parent().name != "WinScreen":
 		soulLeft = get_tree().get_root().get_node("World").soulCount
@@ -19,7 +21,7 @@ func _physics_process(_delta):
 		streamPlayer.stream = load("res://Assets/Music/Jump.wav")
 		streamPlayer.play()
 		streamPlayer.connect("finished", Music, "free_body", [streamPlayer])
-	if position.y > 572:
+	if camera != null and position.y > camera.limit_bottom + 30:
 		restart()
 	if Input.is_action_just_pressed("restart"):
 		restart()
@@ -64,5 +66,9 @@ func handleAnimations(moveVector):
 
 func restart():
 	get_parent().get_node("WinBox/AnimationPlayer").play("TransOut")
-	yield(get_tree().create_timer(0.4), "timeout")
-	var reload = get_tree().reload_current_scene()
+	get_parent().get_node("WinBox/AnimationPlayer").connect("animation_finished", self, "restartReload")
+	set_physics_process(false)
+
+func restartReload(anim_name):
+	if anim_name == "TransOut":
+		var reload = get_tree().reload_current_scene()

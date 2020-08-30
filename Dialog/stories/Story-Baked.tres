@@ -211,6 +211,43 @@ story = {
 "text": "<end>"
 }
 }
+},
+6: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Devil</speaker>
+<dialog>This is the last level!</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Devil</speaker>
+<dialog>Escape this and you are free!</dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Devil</speaker>
+<dialog>Good luck!</dialog>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
 }
 }
 names = {
@@ -218,5 +255,6 @@ names = {
 "L2/Shrine": 2,
 "L3/Shrine": 3,
 "L4/Shrine": 4,
+"L8/Shrine": 6,
 "Shrine/NoSoul": 5
 }

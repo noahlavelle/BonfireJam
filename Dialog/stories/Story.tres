@@ -10,6 +10,7 @@ names = {
 "L2/Shrine": 2,
 "L3/Shrine": 3,
 "L4/Shrine": 4,
+"L8/Shrine": 6,
 "Shrine/NoSoul": 5
 }
 story = {
@@ -350,7 +351,68 @@ story = {
 "type": "line"
 }
 }
+},
+6: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "End Message",
+"name": "L8/Shrine",
+"nodes": {
+1: {
+"graph_offset": Vector2( 20, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 460, 40 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>This is the last level!</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 900, 40 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Escape this and you are free!</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 20, 200 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Good luck!</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 460, 200 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
 }
 }
-available_dids = [ 6, 7, 8, 9 ]
+}
+}
+available_dids = [ 7, 8, 9 ]
 groups = [ "Enemies", "Grasslands", "NPCs", "Nemu Village", "Signposts", "Spellbooks", "Tutorials" ]
