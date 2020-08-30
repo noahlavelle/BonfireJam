@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Objects/Confetti.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tilesets/Ground.tres" type="TileSet" id=3]
+[ext_resource path="res://Objects/Confetti.gd" type="Script" id=4]
+[ext_resource path="res://Objects/Background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Fonts/MenuButton.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Assets/Fonts/PressStart2P.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Levels/WinScreen.gd" type="Script" id=8]
+[ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Confetti" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 128 )
+rotation = -0.862193
+amount = 200
+lifetime = 1.6
+script = ExtResource( 4 )
+
+[node name="Confetti4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304, 128 )
+rotation = -2.31431
+script = ExtResource( 4 )
+
+[node name="Confetti2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 152 )
+rotation = -0.535816
+script = ExtResource( 4 )
+
+[node name="Confetti3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304, 152 )
+rotation = 3.73151
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 152, 72 )
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 65537, -65536, 0, 65537, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 65537, -65531, 0, 65537, -65530, 0, 65537, -65529, 0, 65537, -65528, 0, 65537, -65527, 0, 65537, -65526, 0, 65537, -65525, 0, 65537, -65524, 0, 65537, -65523, 0, 65537, -65522, 0, 65537, -65521, 0, 65537, -65520, 0, 65537, -65519, 0, 65537, -65518, 0, 65537, -65517, 0, 65537, -65516, 0, 65537, 65535, 0, 65537, 20, 0, 65537, 131071, 0, 65537, 65556, 0, 65537, 196607, 0, 65537, 131092, 0, 65537, 262143, 0, 65537, 196628, 0, 65537, 327679, 0, 65537, 262164, 0, 65537, 393215, 0, 65537, 327700, 0, 65537, 458751, 0, 65537, 393216, 0, 131076, 393217, 0, 131076, 393218, 0, 131076, 393219, 0, 131076, 393220, 0, 131076, 393221, 0, 1, 393222, 0, 131076, 393223, 0, 1, 393224, 0, 1, 393225, 0, 131076, 393226, 0, 1, 393227, 0, 131076, 393228, 0, 131076, 393229, 0, 131076, 393230, 0, 1, 393231, 0, 131076, 393232, 0, 1, 393233, 0, 131076, 393234, 0, 131076, 393235, 0, 1, 393236, 0, 65537, 524287, 0, 65536, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65537, 458756, 0, 65537, 458757, 0, 65537, 458758, 0, 65537, 458759, 0, 65537, 458760, 0, 65537, 458761, 0, 65537, 458762, 0, 65537, 458763, 0, 65537, 458764, 0, 65537, 458765, 0, 65537, 458766, 0, 65537, 458767, 0, 65537, 458768, 0, 65537, 458769, 0, 65537, 458770, 0, 65537, 458771, 0, 65537, 458772, 0, 65538, 589823, 0, 65536, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 65537, 524304, 0, 65537, 524305, 0, 65537, 524306, 0, 65537, 524307, 0, 65537, 524308, 0, 65539, 655359, 0, 65536, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65537, 589840, 0, 65537, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 65537, 589844, 0, 65539, 720895, 0, 65536, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65537, 655371, 0, 65537, 655372, 0, 65537, 655373, 0, 65537, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65538, 786431, 0, 131072, 720896, 0, 131073, 720897, 0, 4, 720898, 0, 4, 720899, 0, 131073, 720900, 0, 131073, 720901, 0, 131073, 720902, 0, 4, 720903, 0, 4, 720904, 0, 4, 720905, 0, 131073, 720906, 0, 4, 720907, 0, 131073, 720908, 0, 131073, 720909, 0, 4, 720910, 0, 4, 720911, 0, 4, 720912, 0, 131073, 720913, 0, 4, 720914, 0, 4, 720915, 0, 4, 720916, 0, 131074 )
+
+[node name="Background" parent="." instance=ExtResource( 5 )]
+position = Vector2( -16, -16 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 8.0
+margin_right = 336.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 6 )
+text = "You Win!
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 40.0
+margin_top = 32.0
+margin_right = 288.0
+margin_bottom = 52.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Button"]
+margin_right = 252.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 1 )
+text = "Press here to restart"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinBox" parent="." instance=ExtResource( 9 )]
+script = null
+
+[node name="CollisionShape2D" parent="WinBox" index="0"]
+position = Vector2( -32, -24 )
+
+[node name="ColorRect" parent="WinBox/CanvasLayer" index="0"]
+visible = false
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="animation_finished" from="WinBox/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="WinBox"]

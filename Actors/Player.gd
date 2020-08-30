@@ -5,11 +5,11 @@ var velocity = Vector2.ZERO
 var speed = Vector2(150, 300)
 var gravity = 1000
 
-onready var soulLeft = get_tree().get_root().get_node("World").soulCount
-
 func _ready():
-	get_tree().paused = false
-	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(soulLeft)
+	if get_parent().name != "WinScreen":
+		var soulLeft = get_tree().get_root().get_node("World").soulCount
+		get_tree().paused = false
+		get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(soulLeft)
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("move_jump") and ((is_on_floor() and gravity > 0) or (is_on_ceiling() and gravity < 0)):
