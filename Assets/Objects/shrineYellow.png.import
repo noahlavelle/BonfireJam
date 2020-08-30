@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shrine.png-8030caa48e59aa5d86d61ccb6cc2a513.stex"
+path="res://.import/shrineYellow.png-381cf64fcb0f8ebc22b192d68904f246.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/shrine.png"
-dest_files=[ "res://.import/shrine.png-8030caa48e59aa5d86d61ccb6cc2a513.stex" ]
+source_file="res://Assets/Objects/shrineYellow.png"
+dest_files=[ "res://.import/shrineYellow.png-381cf64fcb0f8ebc22b192d68904f246.stex" ]
 
 [params]
 

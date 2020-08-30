@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/fg_0.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/bg_1.png" type="Texture" id=8]
 [ext_resource path="res://Assets/oneWayPlatform.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/Blue.tres" type="TileSet" id=10]
+[ext_resource path="res://Assets/Objects/shrineBlue.png" type="Texture" id=11]
 [ext_resource path="res://Levels/save_script.gd" type="Script" id=12]
 [ext_resource path="res://game_save.gd" type="Script" id=13]
 [ext_resource path="res://Assets/WinFlag.png" type="Texture" id=14]
@@ -603,3 +604,8 @@ story = "L2/Shrine"
 position = Vector2( 121, 511 )
 scale = Vector2( 0.7, 0.7 )
 story = "none"
+
+[node name="Sprite" parent="ShrineB" index="1"]
+texture = ExtResource( 11 )
+
+[editable path="ShrineB"]

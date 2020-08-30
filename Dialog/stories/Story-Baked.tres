@@ -26,23 +26,30 @@ story = {
 0: 4
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Anyway. You seem to be stuck. For one of your soul shards I could put you in the body of a lost adventurer.</dialog>"
+<dialog>Anyway. You seem to be stuck.</dialog>"
 },
 4: {
 "links": {
 0: 5
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Maybe you'd have better luck then.</dialog>"
+<dialog>For one of your soul shards I could put you in the body of a lost adventurer.</dialog>"
 },
 5: {
 "links": {
 0: 6
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Here goes nothing!</dialog>"
+<dialog>Maybe you'd have better luck then.</dialog>"
 },
 6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Devil</speaker>
+<dialog>Here goes nothing!</dialog>"
+},
+7: {
 "links": {
 
 },
@@ -121,7 +128,7 @@ story = {
 0: 5
 },
 "text": "<speaker>Devil</speaker>
-<dialog>That will take you right back to the start of the room.</dialog>"
+<dialog>That will take you right back to the start of the level.</dialog>"
 },
 5: {
 "links": {
@@ -151,7 +158,7 @@ story = {
 0: 3
 },
 "text": "<speaker>Devil</speaker>
-<dialog>You may have noticed that my face keeps changing colour.  </dialog>"
+<dialog>You may have noticed that my eyes keep changing colour. </dialog>"
 },
 3: {
 "links": {
@@ -181,11 +188,35 @@ story = {
 <dialog>Good luck out there!</dialog>"
 }
 }
+},
+5: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Devil</speaker>
+<dialog>What did I tell you about your soul count?</dialog>"
+},
+3: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
 }
 }
 names = {
 "L1/Shrine": 1,
 "L2/Shrine": 2,
 "L3/Shrine": 3,
-"L4/Shrine": 4
+"L4/Shrine": 4,
+"Shrine/NoSoul": 5
 }

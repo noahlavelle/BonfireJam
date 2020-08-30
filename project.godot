@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Bonfire Jam"
-run/main_scene="res://Home Screen.tscn"
+run/main_scene="res://HomeScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -9,7 +9,8 @@ names = {
 "L1/Shrine": 1,
 "L2/Shrine": 2,
 "L3/Shrine": 3,
-"L4/Shrine": 4
+"L4/Shrine": 4,
+"Shrine/NoSoul": 5
 }
 story = {
 1: {
@@ -47,7 +48,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>Anyway. You seem to be stuck. For one of your soul shards I could put you in the body of a lost adventurer.</dialog>",
+<dialog>Anyway. You seem to be stuck.</dialog>",
 "type": "line"
 },
 4: {
@@ -58,7 +59,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>Maybe you'd have better luck then.</dialog>",
+<dialog>For one of your soul shards I could put you in the body of a lost adventurer.</dialog>",
 "type": "line"
 },
 5: {
@@ -69,11 +70,22 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>Here goes nothing!</dialog>",
+<dialog>Maybe you'd have better luck then.</dialog>",
 "type": "line"
 },
 6: {
 "graph_offset": Vector2( 920, 200 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Here goes nothing!</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 40, 360 ),
 "links": {
 
 },
@@ -202,7 +214,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>That will take you right back to the start of the room.</dialog>",
+<dialog>That will take you right back to the start of the level.</dialog>",
 "type": "line"
 },
 5: {
@@ -252,7 +264,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>You may have noticed that my face keeps changing colour.  </dialog>",
+<dialog>You may have noticed that my eyes keep changing colour. </dialog>",
 "type": "line"
 },
 3: {
@@ -299,7 +311,46 @@ story = {
 "type": "line"
 }
 }
+},
+5: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Out of soul",
+"name": "Shrine/NoSoul",
+"nodes": {
+1: {
+"graph_offset": Vector2( -240, 0 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 200, 0 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>What did I tell you about your soul count?</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 640, 0 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
 }
 }
-available_dids = [ 5, 6, 7, 8, 9 ]
+}
+}
+available_dids = [ 6, 7, 8, 9 ]
 groups = [ "Enemies", "Grasslands", "NPCs", "Nemu Village", "Signposts", "Spellbooks", "Tutorials" ]

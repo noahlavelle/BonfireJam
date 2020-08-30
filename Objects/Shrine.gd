@@ -30,8 +30,11 @@ func cutscene():
 	player.soulLeft -= 1
 	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(player.soulLeft)
 	if player.soulLeft == 0:
-		get_tree().paused = false
-		player.restart()
+		var dialog = Dialog.instance()
+		add_child(dialog)
+		dialog.play_dialog("Shrine/NoSoul")
+		get_tree().paused = true
+		return dialog.connect("dialogFinished", self, "restart")
 	$Animation/Soul.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
 	$Animation/Soul.show()
 	$Animation/Anim.play("ScaleIn")
@@ -76,3 +79,6 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	player_in_area = false
 	$Animation/EKey.hide()
+
+func restart():
+	player.restart()
