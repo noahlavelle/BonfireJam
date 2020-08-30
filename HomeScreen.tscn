@@ -101,9 +101,9 @@ __meta__ = {
 }
 
 [node name="Logo" type="TextureRect" parent="Camera2D/CanvasLayer/TitleScreen"]
-margin_left = 176.0
+margin_left = 175.159
 margin_top = 16.0
-margin_right = 688.0
+margin_right = 687.159
 margin_bottom = 528.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
