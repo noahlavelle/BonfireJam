@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Logo.png" type="Texture" id=1]
+[ext_resource path="res://Assets/logo2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/ground.png" type="Texture" id=2]
 [ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/Background.tscn" type="PackedScene" id=4]
@@ -11,6 +11,9 @@
 script = ExtResource( 5 )
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
+
+[node name="Sprite" parent="Background/PBG/TreesBack" index="0"]
+position = Vector2( 0, -144 )
 
 [node name="FrontRocks" parent="Background/PFG" index="1"]
 z_index = 4
@@ -50,15 +53,17 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="Camera2D/CanvasLayer/TitleScreen"]
-margin_left = 12.0
-margin_top = 14.0
-margin_right = 140.0
-margin_bottom = 68.0
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 168.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 6 )
-text = "Put Your
-Soul
-into it"
+text = "Deal With 
+The Devil"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="NewGame" type="Button" parent="Camera2D/CanvasLayer/TitleScreen"]
 margin_left = 12.0
@@ -96,14 +101,14 @@ __meta__ = {
 }
 
 [node name="Logo" type="TextureRect" parent="Camera2D/CanvasLayer/TitleScreen"]
-margin_left = 152.0
-margin_top = -1.0
-margin_right = 312.0
-margin_bottom = 139.0
+margin_left = 176.0
+margin_top = 16.0
+margin_right = 688.0
+margin_bottom = 528.0
+rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 stretch_mode = 4
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/NewGame" to="." method="_on_NewGame_pressed"]

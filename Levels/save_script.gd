@@ -9,7 +9,7 @@ func verify_Save():
 	pass
 
 func save_world():
-	var dir_to_save = 'res://Saves/'
+	var dir_to_save = 'user://Saves/'
 	var new_save = game_save_class.new()
 	new_save.Level = Level
 	var dir = Directory.new()

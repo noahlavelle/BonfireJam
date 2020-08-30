@@ -47,6 +47,7 @@ func _on_Dialog_Player_pressed_spacebar():
 # Public Methods
 
 func play_dialog(record_name : String):
+	$Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label/TalkSound.play("talk")
 	_did = _Story_Reader.get_did_via_record_name(record_name)
 	_nid = self._Story_Reader.get_nid_via_exact_text(_did, "<start>")
 	_final_nid = _Story_Reader.get_nid_via_exact_text(_did, "<end>")
@@ -65,6 +66,7 @@ func _is_waiting():
 
 
 func _get_next_node():
+	$Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label/TalkSound.play("talk")
 	_nid = _Story_Reader.get_nid_from_slot(_did, _nid, 0)
 	if _nid == _final_nid:
 		emit_signal("dialogFinished")

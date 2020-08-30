@@ -9,10 +9,10 @@ var save_profile = false
 func _ready():
 	$Camera2D/CanvasLayer/Transition/CanvasLayer/ColorRect.show()
 	var dir = Directory.new()
-	if not dir.file_exists('res://Saves/save.tres'):
+	if not dir.file_exists('user://Saves/save.tres'):
 		$Camera2D/CanvasLayer/TitleScreen/Continue/Label.add_color_override("font_color", '646464')
 	else:
-		current_level = load('res://Saves/save.tres').Level
+		current_level = load('user://Saves/save.tres').Level
 		$Camera2D/CanvasLayer/TitleScreen/Continue/Label.text += '(' + str(current_level) + ')'
 		save_profile = true
 

@@ -491,6 +491,7 @@ cell_size = Vector2( 16, 16 )
 collision_layer = 4
 collision_mask = 0
 format = 1
+tile_data = PoolIntArray( 1310731, 0, 0, 1310732, 0, 2, 1441802, 0, 0, 1441803, 0, 1, 1441804, 0, 1, 1441805, 0, 2, 1572874, 0, 0, 1572875, 0, 1, 1572876, 0, 1, 1572877, 0, 2, 1769479, 0, 0, 1769480, 0, 1, 1769481, 0, 2, 1769486, 0, 0, 1769487, 0, 1, 1769488, 0, 2 )
 script = ExtResource( 12 )
 Level = 1
 game_save_class = ExtResource( 13 )

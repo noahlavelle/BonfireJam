@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Dialog/fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Dialog/textures/menu_section_9patch.png" type="Texture" id=2]
 [ext_resource path="res://Dialog/scripts/dialog_player.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sounds/talk.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -23,9 +24,39 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("TalkSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "stop"
+} ]
+}
 
 [sub_resource type="Animation" id=3]
-resource_name = "Blink"
+resource_name = "talk"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=4]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:rect_scale")
@@ -89,6 +120,13 @@ autowrap = true
 autoplay = "TextDisplay"
 anims/TextDisplay = SubResource( 2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
+stream = ExtResource( 4 )
+volume_db = -13.0
+
+[node name="TalkSound" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
+anims/talk = SubResource( 3 )
+
 [node name="Speaker_NinePatchRect" type="NinePatchRect" parent="Dialog_Box/Body_NinePatchRect"]
 margin_left = 13.0
 margin_top = -8.0
@@ -145,5 +183,5 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/SpaceBar_NinePatchRect/SpaceBar_Label"]
 autoplay = "Blink"
-anims/Blink = SubResource( 3 )
+anims/Blink = SubResource( 4 )
 [connection signal="animation_finished" from="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label/Body_AnimationPlayer" to="." method="_on_Body_AnimationPlayer_animation_finished"]

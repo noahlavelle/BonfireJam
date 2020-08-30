@@ -2,12 +2,13 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 
-var speed = Vector2(200, 300)
+var speed = Vector2(150, 300)
 var gravity = 1000
 
 onready var soulLeft = get_tree().get_root().get_node("World").soulCount
 
 func _ready():
+	get_tree().paused = false
 	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(soulLeft)
 
 func _physics_process(_delta):
