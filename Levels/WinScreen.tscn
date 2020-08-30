@@ -20,25 +20,31 @@ font_data = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="Confetti" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16, 128 )
+position = Vector2( 3.8147e-06, -2.28882e-05 )
 rotation = -0.862193
 amount = 200
-lifetime = 1.6
+lifetime = 2.0
 script = ExtResource( 4 )
 
 [node name="Confetti4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 304, 128 )
+position = Vector2( 320, 7.62939e-06 )
 rotation = -2.31431
+amount = 200
+lifetime = 2.0
 script = ExtResource( 4 )
 
 [node name="Confetti2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16, 152 )
+position = Vector2( 0, 176 )
 rotation = -0.535816
+amount = 200
+lifetime = 2.0
 script = ExtResource( 4 )
 
 [node name="Confetti3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 304, 152 )
+position = Vector2( 320, 176 )
 rotation = 3.73151
+amount = 200
+lifetime = 2.0
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]

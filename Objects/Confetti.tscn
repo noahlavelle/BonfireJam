@@ -8,7 +8,7 @@ curve = SubResource( 1 )
 
 [sub_resource type="ParticlesMaterial" id=3]
 flag_disable_z = true
-spread = 13.85
+spread = 10.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 137.93
 orbit_velocity = 0.0
