@@ -472,6 +472,7 @@ position = Vector2( 344, 540 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
 position = Vector2( 344, 548 )
+frame = 0
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -597,6 +598,9 @@ speed = Vector2( 300, -250 )
 gravity = -1000
 modHex = "#fd00ff"
 story = "none"
+
+[node name="EKey" parent="Shrine/Animation" index="3"]
+frame = 0
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )

@@ -17,6 +17,7 @@ onready var camera = get_tree().get_root().get_node("World/Camera2D")
 
 func dialog():
 	if story == "none":
+		get_tree().paused = true
 		cutscene()
 	else:
 		dialog = Dialog.instance()
