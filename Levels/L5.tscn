@@ -14,7 +14,7 @@
 [ext_resource path="res://Assets/fg_0.png" type="Texture" id=12]
 [ext_resource path="res://Assets/fg_1.png" type="Texture" id=13]
 [ext_resource path="res://Assets/tileset.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Objects/shrinePurple.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Objects/statueCyan.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Objects/shrineGreen.png" type="Texture" id=16]
 [ext_resource path="res://Tilesets/Blue.tres" type="TileSet" id=17]
 [ext_resource path="res://Tilesets/Yellow.tres" type="TileSet" id=18]
@@ -445,6 +445,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 script = ExtResource( 5 )
 Level = 5
 game_save_class = ExtResource( 6 )
+soulCount = 3
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -482,19 +483,19 @@ format = 1
 tile_data = PoolIntArray( 1638425, 0, 0, 1638426, 0, 1, 1638427, 0, 1, 1638428, 0, 1, 1638429, 0, 1, 1638430, 0, 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 26.9041, 258.214 )
+position = Vector2( 48, 426 )
 current = true
 zoom = Vector2( 1.1, 1.1 )
 limit_left = 0
 limit_top = 280
-limit_right = 961
+limit_right = 855
 limit_bottom = 572
 limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 9.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 26.9041, 308.214 )
+position = Vector2( 48, 476 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )
@@ -504,11 +505,8 @@ remote_path = NodePath("../../Camera2D")
 position = Vector2( 253.12, 415.016 )
 scale = Vector2( 0.7, 0.7 )
 passThroughLayer = 7
-modHex = "ca07ec"
+modHex = "00ffff"
 story = "none"
-
-[node name="EKey" parent="Statue/Animation" index="3"]
-frame = 1
 
 [node name="Sprite" parent="Statue" index="1"]
 texture = ExtResource( 15 )
@@ -579,7 +577,8 @@ __meta__ = {
 }
 
 [node name="WinBox" parent="." instance=ExtResource( 2 )]
-position = Vector2( 921.934, 392.493 )
+position = Vector2( 844, 396 )
+pathToScene = "res://Levels/L6.tscn"
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
@@ -596,9 +595,6 @@ speed = Vector2( 600, 300 )
 modHex = "#000aff"
 story = "none"
 
-[node name="EKey" parent="Shrine2/Animation" index="3"]
-frame = 1
-
 [node name="Sprite" parent="Shrine2" index="1"]
 texture = ExtResource( 9 )
 
@@ -608,9 +604,6 @@ scale = Vector2( 0.7, 0.7 )
 speed = Vector2( 300, 500 )
 modHex = "#00ff1c"
 story = "none"
-
-[node name="EKey" parent="Shrine3/Animation" index="3"]
-frame = 1
 
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 16 )

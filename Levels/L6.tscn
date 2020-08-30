@@ -471,7 +471,7 @@ position = Vector2( 344, 540 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
 position = Vector2( 344, 548 )
-frame = 1
+frame = 0
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -507,7 +507,7 @@ cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 204, 466 )
+position = Vector2( 936, 418 )
 current = true
 zoom = Vector2( 1.1, 1.1 )
 limit_left = 110
@@ -520,7 +520,7 @@ smoothing_speed = 9.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 modulate = Color( 0.992157, 1, 1, 1 )
-position = Vector2( 204, 516 )
+position = Vector2( 936, 468 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )
