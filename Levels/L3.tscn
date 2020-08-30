@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/fg_0.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/bg_1.png" type="Texture" id=8]
 [ext_resource path="res://Assets/oneWayPlatform.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/Blue.tres" type="TileSet" id=10]
+[ext_resource path="res://Objects/Camera2D.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Levels/save_script.gd" type="Script" id=12]
 [ext_resource path="res://game_save.gd" type="Script" id=13]
 [ext_resource path="res://Assets/WinFlag.png" type="Texture" id=14]
@@ -488,10 +489,10 @@ tile_data = PoolIntArray( 1114147, 0, 0, 1114148, 0, 131076, 1114149, 0, 131076,
 [node name="Yellow" type="TileMap" parent="Tilemaps"]
 tile_set = SubResource( 40 )
 cell_size = Vector2( 16, 16 )
-collision_layer = 4
+collision_layer = 0
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 1310731, 0, 0, 1310732, 0, 2, 1441802, 0, 0, 1441803, 0, 1, 1441804, 0, 1, 1441805, 0, 2, 1572874, 0, 0, 1572875, 0, 1, 1572876, 0, 1, 1572877, 0, 2, 1769479, 0, 0, 1769480, 0, 1, 1769481, 0, 2, 1769486, 0, 0, 1769487, 0, 1, 1769488, 0, 2 )
+tile_data = PoolIntArray( 1310731, 0, 0, 1310732, 0, 2, 1441802, 0, 0, 1441803, 0, 1, 1441804, 0, 1, 1441805, 0, 2, 1572874, 0, 0, 1572875, 0, 1, 1572876, 0, 1, 1572877, 0, 2, 1769479, 0, 0, 1769480, 0, 1, 1769481, 0, 2, 1769486, 0, 0, 1769487, 0, 1, 1769488, 0, 2, 2293810, 0, 1, 2359346, 0, 1, 2424881, 0, 1, 2490417, 0, 1, 2555953, 0, 1, 2621489, 0, 1, 2687024, 0, 1, 2752560, 0, 1, 2818096, 0, 1, 2883632, 0, 1, 2949167, 0, 1, 3014703, 0, 1 )
 script = ExtResource( 12 )
 Level = 1
 game_save_class = ExtResource( 13 )
@@ -504,19 +505,12 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 1900549, 0, 0, 1900550, 0, 1, 1900551, 0, 1, 1900552, 0, 1, 1900553, 0, 1, 1900554, 0, 1, 1900555, 0, 1, 1900556, 0, 1, 1900557, 0, 1, 1900558, 0, 1, 1900559, 0, 1, 1900560, 0, 1, 1900561, 0, 1, 1900562, 0, 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 28, 490 )
-current = true
-zoom = Vector2( 1.1, 1.1 )
-limit_left = 0
+[node name="Camera2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 23, 492.5 )
 limit_right = 639
-limit_bottom = 572
-limit_smoothed = true
-smoothing_enabled = true
-smoothing_speed = 9.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 28, 448 )
+position = Vector2( 23, 450.5 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, 42 )

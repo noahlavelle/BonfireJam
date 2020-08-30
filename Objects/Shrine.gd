@@ -14,6 +14,7 @@ var Dialog = preload("res://Dialog/Dialog.tscn")
 var dialog
 
 onready var player = get_tree().get_root().get_node("World/Player")
+onready var camera = get_tree().get_root().get_node("World/Camera2D")
 
 func dialog():
 	if story == "none":
@@ -48,6 +49,13 @@ func _physics_process(_delta):
 		$Sprite.flip_h = true
 
 func _on_Anim_animation_finished(anim_name):
+	var streamPlayer = AudioStreamPlayer.new()
+	streamPlayer.volume_db -= 10
+	add_child(streamPlayer)
+	streamPlayer.stream = load("res://Assets/Sounds/boom.wav")
+	streamPlayer.play()
+	streamPlayer.connect("finished", Music, "free_body", [streamPlayer])
+	camera.shake(0.7, 20, 40)
 	$Animation/SoulParticles.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
 	$Animation/SoulParticles.restart()
 	$Animation/Soul.hide()

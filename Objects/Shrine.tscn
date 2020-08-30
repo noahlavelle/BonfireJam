@@ -53,8 +53,8 @@ script = ExtResource( 2 )
 pause_mode = 2
 
 [node name="Soul" type="Line2D" parent="Animation"]
-visible = false
 position = Vector2( 0, -30 )
+scale = Vector2( 1e-05, 1e-05 )
 points = PoolVector2Array( 0.0286088, -0.000183105, 0.0384517, -0.010025 )
 width = 15.0
 default_color = Color( 1, 1, 1, 1 )
