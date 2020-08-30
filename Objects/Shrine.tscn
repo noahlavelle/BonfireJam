@@ -80,7 +80,6 @@ anims/ScaleIn = SubResource( 4 )
 visible = false
 position = Vector2( 2.38419e-07, -38 )
 scale = Vector2( 0.6, 0.6 )
-frame = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )

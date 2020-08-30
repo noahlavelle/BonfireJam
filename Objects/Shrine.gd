@@ -72,8 +72,9 @@ func _on_Anim_animation_finished(anim_name):
 
 
 func _on_Area2D_body_entered(body):
-	player_in_area = true
-	$Animation/EKey.show()
+	if body == player:
+		player_in_area = true
+		$Animation/EKey.show()
 
 
 func _on_Area2D_body_exited(body):
