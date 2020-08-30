@@ -6,7 +6,8 @@
 script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
-"L1/Shrine": 1
+"L1/Shrine": 1,
+"L2/Shrine": 2
 }
 story = {
 1: {
@@ -80,7 +81,79 @@ story = {
 "type": "line"
 }
 }
+},
+2: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Introduction to soul",
+"name": "L2/Shrine",
+"nodes": {
+1: {
+"graph_offset": Vector2( -60, -20 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 380, -20 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Hey. Glad to see you made it.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 820, -20 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>By the way, that little number up at the top left is your soul count.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( -60, 140 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Each time you trade with me, you lose one.</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 380, 140 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>If it hits zero, you die. So whatever you do DON'T let that happen</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 820, 140 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
 }
 }
-available_dids = [ 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+}
+available_dids = [ 3, 4, 5, 6, 7, 8, 9 ]
 groups = [ "Enemies", "Grasslands", "NPCs", "Nemu Village", "Signposts", "Spellbooks", "Tutorials" ]

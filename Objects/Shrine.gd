@@ -24,6 +24,11 @@ func dialog():
 	dialog.connect("dialogFinished", self, "cutscene")
 
 func cutscene():
+	player.soulLeft -= 1
+	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(player.soulLeft)
+	if player.soulLeft == 0:
+		get_tree().paused = false
+		player.restart()
 	$Animation/Soul.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
 	$Animation/Soul.show()
 	$Animation/Anim.play("ScaleIn")

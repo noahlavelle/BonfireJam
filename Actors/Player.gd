@@ -5,7 +5,14 @@ var velocity = Vector2.ZERO
 var speed = Vector2(300, 300)
 var gravity = 1000
 
+onready var soulLeft = get_tree().get_root().get_node("World").soulCount
+
+func _ready():
+	get_parent().get_node("UI/UI/MarginContainer/Soul/SoulIcon/Label").text = str(soulLeft)
+
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("restart"):
+		restart()
 	var isJumpInterrupted = Input.is_action_just_released("move_jump") and velocity.y < 0.0
 	var moveVector = getMoveVector()
 	handleAnimations(moveVector)
@@ -39,3 +46,8 @@ func handleAnimations(moveVector):
 	else:
 		$AnimatedSprite.animation = "run"
 		$AnimatedSprite.flip_h = clamp(moveVector.x * -1, 0, 1)
+
+func restart():
+	get_parent().get_node("WinBox/AnimationPlayer").play("TransOut")
+	yield(get_tree().create_timer(0.4), "timeout")
+	get_tree().reload_current_scene()

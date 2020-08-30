@@ -3,6 +3,8 @@ extends Node2D
 export(int) var Level
 export(Script) var game_save_class
 
+export var soulCount = 2
+
 func verify_Save():
 	pass
 

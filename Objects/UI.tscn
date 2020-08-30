@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Logo.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/PressStart2P.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 11
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 8.0
+margin_right = -14.0
+margin_bottom = -8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Soul" type="Node2D" parent="UI/MarginContainer"]
+
+[node name="SoulIcon" type="Sprite" parent="UI/MarginContainer/Soul"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Label" type="Label" parent="UI/MarginContainer/Soul/SoulIcon"]
+margin_left = 160.0
+margin_top = 33.3333
+margin_right = 240.0
+margin_bottom = 113.333
+custom_fonts/font = SubResource( 1 )
+text = "2"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
