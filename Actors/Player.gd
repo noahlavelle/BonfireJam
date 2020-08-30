@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 
-var speed = Vector2(300, 300)
+var speed = Vector2(200, 300)
 var gravity = 1000
 
 onready var soulLeft = get_tree().get_root().get_node("World").soulCount
