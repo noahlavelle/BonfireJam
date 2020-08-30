@@ -16,12 +16,15 @@ var dialog
 onready var player = get_tree().get_root().get_node("World/Player")
 
 func dialog():
-	dialog = Dialog.instance()
-	add_child(dialog)
-	dialog.get_node("Dialog_Box").visible = true
-	dialog.play_dialog(story)
-	get_tree().paused = true
-	dialog.connect("dialogFinished", self, "cutscene")
+	if story != "none":
+		dialog = Dialog.instance()
+		add_child(dialog)
+		dialog.get_node("Dialog_Box").visible = true
+		dialog.play_dialog(story)
+		get_tree().paused = true
+		dialog.connect("dialogFinished", self, "cutscene")
+	else:
+		cutscene()
 
 func cutscene():
 	player.soulLeft -= 1
