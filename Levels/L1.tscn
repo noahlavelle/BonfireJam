@@ -62,7 +62,7 @@ z_index = 1
 
 [node name="Splash" parent="Waterfalls" instance=ExtResource( 11 )]
 position = Vector2( 328, 552 )
-frame = 0
+frame = 1
 
 [node name="Tilemaps" type="Node" parent="."]
 
