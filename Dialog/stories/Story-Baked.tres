@@ -33,7 +33,7 @@ story = {
 0: 5
 },
 "text": "<speaker>Devil</speaker>
-<dialog>Maybe you'd have better luck then</dialog>"
+<dialog>Maybe you'd have better luck then.</dialog>"
 },
 5: {
 "links": {
@@ -84,7 +84,7 @@ story = {
 0: 6
 },
 "text": "<speaker>Devil</speaker>
-<dialog>If it hits zero, you die. So whatever you do DON'T let that happen</dialog>"
+<dialog>If it hits zero, you die. So whatever you do DON'T let that happen.</dialog>"
 },
 6: {
 "links": {
@@ -93,9 +93,99 @@ story = {
 "text": "<end>"
 }
 }
+},
+3: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Devil</speaker>
+<dialog>You really are going quick, but at somepoint you may get stuck.</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Devil</speaker>
+<dialog>If you do, just hit the R key.</dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>Devil</speaker>
+<dialog>That will take you right back to the start of the room.</dialog>"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "<speaker>Devil</speaker>
+<dialog>You might need that alot...</dialog>"
+},
+6: {
+"links": {
+
+},
+"text": "<end>"
+}
+}
+},
+4: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker>Devil</speaker>
+<dialog>You may have noticed that my face keeps changing colour.  </dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>Devil</speaker>
+<dialog>My colour represents the ability the lost adventurer had.</dialog>"
+},
+4: {
+"links": {
+0: 6
+},
+"text": "<speaker>Devil</speaker>
+<dialog>You will have to figure out what means what as you go along.</dialog>"
+},
+5: {
+"links": {
+
+},
+"text": "<end>"
+},
+6: {
+"links": {
+0: 5
+},
+"text": "<speaker>Devil</speaker>
+<dialog>Good luck out there!</dialog>"
+}
+}
 }
 }
 names = {
 "L1/Shrine": 1,
-"L2/Shrine": 2
+"L2/Shrine": 2,
+"L3/Shrine": 3,
+"L4/Shrine": 4
 }
