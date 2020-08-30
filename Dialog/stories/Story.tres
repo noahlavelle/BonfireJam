@@ -7,7 +7,9 @@ script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
 "L1/Shrine": 1,
-"L2/Shrine": 2
+"L2/Shrine": 2,
+"L3/Shrine": 3,
+"L4/Shrine": 4
 }
 story = {
 1: {
@@ -56,7 +58,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>Maybe you'd have better luck then</dialog>",
+<dialog>Maybe you'd have better luck then.</dialog>",
 "type": "line"
 },
 5: {
@@ -139,7 +141,7 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Devil</speaker>
-<dialog>If it hits zero, you die. So whatever you do DON'T let that happen</dialog>",
+<dialog>If it hits zero, you die. So whatever you do DON'T let that happen.</dialog>",
 "type": "line"
 },
 6: {
@@ -153,7 +155,151 @@ story = {
 "type": "line"
 }
 }
+},
+3: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Introduction to restart",
+"name": "L3/Shrine",
+"nodes": {
+1: {
+"graph_offset": Vector2( -260, -60 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 180, -60 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>You really are going quick, but at somepoint you may get stuck.</dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 620, -60 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>If you do, just hit the R key.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( -260, 100 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>That will take you right back to the start of the room.</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 180, 100 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>You might need that alot...</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 620, 100 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
 }
 }
-available_dids = [ 3, 4, 5, 6, 7, 8, 9 ]
+},
+4: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Introduction to colors",
+"name": "L4/Shrine",
+"nodes": {
+1: {
+"graph_offset": Vector2( -260, -60 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 180, -60 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>You may have noticed that my face keeps changing colour.  </dialog>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 620, -60 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>My colour represents the ability the lost adventurer had.</dialog>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( -260, 100 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>You will have to figure out what means what as you go along.</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 620, 100 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 180, 100 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Devil</speaker>
+<dialog>Good luck out there!</dialog>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [ 5, 6, 7, 8, 9 ]
 groups = [ "Enemies", "Grasslands", "NPCs", "Nemu Village", "Signposts", "Spellbooks", "Tutorials" ]
