@@ -605,9 +605,6 @@ gravity = -1000
 modHex = "#fd00ff"
 story = "none"
 
-[node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 1
-
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )
 

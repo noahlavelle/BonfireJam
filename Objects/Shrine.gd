@@ -63,7 +63,8 @@ func _on_Anim_animation_finished(anim_name):
 	player.speed = speed
 	player.gravity = gravity
 	player.set_collision_mask(2 + passThroughLayer)
-	player.rotation_degrees = 180
+	if gravity < 0:
+		player.rotation_degrees = 180
 	
 	player.get_node("AnimationPlayer").play("FadeIn")
 	yield(get_tree().create_timer(0.3), "timeout")
