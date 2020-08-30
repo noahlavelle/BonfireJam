@@ -64,4 +64,4 @@ func handleAnimations(moveVector):
 func restart():
 	get_parent().get_node("WinBox/AnimationPlayer").play("TransOut")
 	yield(get_tree().create_timer(0.4), "timeout")
-	get_tree().reload_current_scene()
+	var reload = get_tree().reload_current_scene()

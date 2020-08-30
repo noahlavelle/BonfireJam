@@ -8,7 +8,6 @@ export var passThroughLayer = 3
 export var modHex = "#ffffff"
 export var story = "L1/Shrine"
 
-var Statue = preload("res://Objects/Statue.tscn")
 var Dialog = preload("res://Dialog/Dialog.tscn")
 
 var dialog
@@ -49,36 +48,34 @@ func _physics_process(_delta):
 		$Sprite.flip_h = true
 
 func _on_Anim_animation_finished(anim_name):
-	var streamPlayer = AudioStreamPlayer.new()
-	streamPlayer.volume_db -= 10
-	add_child(streamPlayer)
-	streamPlayer.stream = load("res://Assets/Sounds/boom.wav")
-	streamPlayer.play()
-	streamPlayer.connect("finished", Music, "free_body", [streamPlayer])
-	camera.shake(0.7, 20, 40)
-	$Animation/SoulParticles.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
-	$Animation/SoulParticles.restart()
-	$Animation/Soul.hide()
-	yield(get_tree().create_timer(2.6), "timeout")
-	var statue = Statue.instance()
-	add_child(statue)
-	statue.global_position = player.global_position
-	statue.get_node("Sprite").flip_h = player.get_node("AnimatedSprite").flip_h
-	player.get_node("AnimationPlayer").play("FadeOut")
-	yield(get_tree().create_timer(0.3), "timeout")
-	player.global_position = Vector2(position.x + 40, position.y - 30)
-	
-	player.speed = speed
-	player.gravity = gravity
-	player.set_collision_mask(2 + passThroughLayer)
-	if gravity < 0:
-		player.rotation_degrees = 180
-	
-	player.get_node("AnimationPlayer").play("FadeIn")
-	yield(get_tree().create_timer(0.3), "timeout")
-	player.get_node("AnimatedSprite").modulate = modHex
-	get_tree().paused = false
-	player.velocity = Vector2.ZERO
+	if anim_name == "ScaleIn":
+		var streamPlayer = AudioStreamPlayer.new()
+		streamPlayer.volume_db -= 10
+		add_child(streamPlayer)
+		streamPlayer.stream = load("res://Assets/Sounds/boom.wav")
+		streamPlayer.play()
+		streamPlayer.connect("finished", Music, "free_body", [streamPlayer])
+		camera.shake(0.7, 20, 40)
+		$Animation/SoulParticles.global_position = Vector2(player.global_position.x, player.global_position.y - 40)
+		$Animation/SoulParticles.restart()
+		$Animation/Soul.hide()
+		yield(get_tree().create_timer(2.6), "timeout")
+		player.get_node("AnimationPlayer").play("FadeOut")
+		yield(get_tree().create_timer(0.3), "timeout")
+		player.global_position = Vector2(position.x + 40, position.y - 30)
+		
+		player.speed = speed
+		player.gravity = gravity
+		player.set_collision_mask(2 + passThroughLayer)
+		if gravity < 0:
+			player.rotation_degrees = 180
+		
+		player.get_node("AnimationPlayer").play("FadeIn")
+		yield(get_tree().create_timer(0.3), "timeout")
+		player.get_node("AnimatedSprite").modulate = modHex
+		get_tree().paused = false
+		player.velocity = Vector2.ZERO
+		$Animation/Anim.play("ScaleOut")
 
 
 func _on_Area2D_body_entered(body):

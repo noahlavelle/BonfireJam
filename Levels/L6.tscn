@@ -507,14 +507,13 @@ cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
-position = Vector2( 936, 418 )
+position = Vector2( 160, 466 )
 limit_left = 110
-limit_top = 280
 limit_right = 970
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 modulate = Color( 0.992157, 1, 1, 1 )
-position = Vector2( 936, 468 )
+position = Vector2( 160, 516 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )
@@ -598,9 +597,6 @@ speed = Vector2( 300, -250 )
 gravity = -1000
 modHex = "#fd00ff"
 story = "none"
-
-[node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 1
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )
