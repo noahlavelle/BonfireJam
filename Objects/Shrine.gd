@@ -16,6 +16,8 @@ onready var player = get_tree().get_root().get_node("World/Player")
 onready var camera = get_tree().get_root().get_node("World/Camera2D")
 
 func dialog():
+	player.get_node("AnimatedSprite").animation = "idle"
+	player.get_node("AnimatedSprite").frame = 0
 	if story == "none":
 		get_tree().paused = true
 		cutscene()
@@ -61,9 +63,17 @@ func _on_Anim_animation_finished(anim_name):
 		$Animation/SoulParticles.restart()
 		$Animation/Soul.hide()
 		yield(get_tree().create_timer(2.6), "timeout")
-		player.get_node("AnimationPlayer").play("FadeOut")
-		yield(get_tree().create_timer(0.3), "timeout")
-		player.global_position = Vector2(position.x + 20, position.y)
+		
+		var statue = load("res://Objects/Statue.tscn").instance()
+		get_parent().add_child(statue)
+		statue.global_position = player.global_position
+		statue.modulate = player.modulate
+		player.modulate = modHex
+		
+		$Animation/Tween.interpolate_property(statue, "modulate", 
+			statue.modulate, Color(statue.modulate.r, statue.modulate.b, statue.modulate.g, 0), 2.0, 
+		$Animation/Tween.TRANS_LINEAR, $Animation/Tween.EASE_IN)
+		$Animation/Tween.start()
 		
 		player.speed = speed
 		player.gravity = gravity
@@ -73,9 +83,7 @@ func _on_Anim_animation_finished(anim_name):
 		else:
 			player.rotation_degrees = 0
 		
-		player.get_node("AnimationPlayer").play("FadeIn")
-		yield(get_tree().create_timer(0.3), "timeout")
-		player.modulate = modHex
+		yield(get_tree().create_timer(2), "timeout")
 		get_tree().paused = false
 		player.velocity = Vector2.ZERO
 		$Animation/Anim.play("ScaleOut")

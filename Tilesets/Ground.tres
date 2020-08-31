@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=36 format=2]
+[gd_resource type="TileSet" load_steps=53 format=2]
 
 [ext_resource path="res://Assets/tileset.png" type="Texture" id=1]
 
@@ -52,6 +52,57 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=52]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=53]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=54]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=55]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=56]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=57]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=58]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=59]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=60]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=61]
+polygon = PoolVector2Array( 0, 16, 16, 16, 16, 0, 0, 0 )
+
+[sub_resource type="OccluderPolygon2D" id=62]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=63]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=64]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=65]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=66]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=67]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=68]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -242,7 +293,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/autotile/icon_coordinate = Vector2( 1, 1 )
 1/autotile/tile_size = Vector2( 16, 16 )
 1/autotile/spacing = 0
-1/autotile/occluder_map = [  ]
+1/autotile/occluder_map = [ Vector2( 0, 0 ), SubResource( 52 ), Vector2( 0, 1 ), SubResource( 53 ), Vector2( 0, 2 ), SubResource( 54 ), Vector2( 1, 0 ), SubResource( 55 ), Vector2( 1, 1 ), SubResource( 56 ), Vector2( 1, 2 ), SubResource( 57 ), Vector2( 2, 0 ), SubResource( 58 ), Vector2( 2, 1 ), SubResource( 59 ), Vector2( 2, 2 ), SubResource( 60 ), Vector2( 3, 0 ), SubResource( 61 ), Vector2( 3, 1 ), SubResource( 62 ), Vector2( 3, 2 ), SubResource( 63 ), Vector2( 4, 0 ), SubResource( 64 ), Vector2( 4, 2 ), SubResource( 65 ), Vector2( 5, 0 ), SubResource( 66 ), Vector2( 5, 1 ), SubResource( 67 ), Vector2( 5, 2 ), SubResource( 68 ) ]
 1/autotile/navpoly_map = [  ]
 1/autotile/priority_map = [  ]
 1/autotile/z_index_map = [  ]

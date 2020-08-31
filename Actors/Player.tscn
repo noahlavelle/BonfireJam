@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Player/herochar_idle_anim_strip_4.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Player/herochar_run_anim_strip_6.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Player/herochar_jump_up_anim_strip_3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Masks/light.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -119,7 +120,7 @@ script = ExtResource( 1 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 14 )
 animation = "idle"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
@@ -132,3 +133,8 @@ shape = SubResource( 15 )
 pause_mode = 2
 anims/FadeIn = SubResource( 16 )
 anims/FadeOut = SubResource( 17 )
+
+[node name="Light2D" type="Light2D" parent="."]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+shadow_enabled = true

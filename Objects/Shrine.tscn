@@ -99,7 +99,8 @@ anims/ScaleOut = SubResource( 5 )
 visible = false
 position = Vector2( 2.38419e-07, -38 )
 scale = Vector2( 0.6, 0.6 )
-frame = 1
+
+[node name="Tween" type="Tween" parent="Animation"]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )
