@@ -51,7 +51,7 @@ func _physics_process(_delta):
 func _on_Anim_animation_finished(anim_name):
 	if anim_name == "ScaleIn":
 		var streamPlayer = AudioStreamPlayer.new()
-		streamPlayer.volume_db -= 10
+		streamPlayer.volume_db = 5
 		add_child(streamPlayer)
 		streamPlayer.stream = load("res://Assets/Sounds/boom.wav")
 		streamPlayer.play()
@@ -63,17 +63,19 @@ func _on_Anim_animation_finished(anim_name):
 		yield(get_tree().create_timer(2.6), "timeout")
 		player.get_node("AnimationPlayer").play("FadeOut")
 		yield(get_tree().create_timer(0.3), "timeout")
-		player.global_position = Vector2(position.x + 40, position.y - 30)
+		player.global_position = Vector2(position.x + 20, position.y)
 		
 		player.speed = speed
 		player.gravity = gravity
 		player.set_collision_mask(2 + passThroughLayer)
 		if gravity < 0:
 			player.rotation_degrees = 180
+		else:
+			player.rotation_degrees = 0
 		
 		player.get_node("AnimationPlayer").play("FadeIn")
 		yield(get_tree().create_timer(0.3), "timeout")
-		player.get_node("AnimatedSprite").modulate = modHex
+		player.modulate = modHex
 		get_tree().paused = false
 		player.velocity = Vector2.ZERO
 		$Animation/Anim.play("ScaleOut")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Levels/MusicValues.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Music/Caves.wav" type="AudioStream" id=2]
+
+[node name="Music" type="Node"]
+script = ExtResource( 1 )
+volume = 0
+path = ExtResource( 2 )

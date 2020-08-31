@@ -122,7 +122,7 @@ anims/TextDisplay = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
 stream = ExtResource( 4 )
-volume_db = -13.0
+volume_db = 5.0
 
 [node name="TalkSound" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
 anims/talk = SubResource( 3 )

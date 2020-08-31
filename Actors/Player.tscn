@@ -111,6 +111,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+modulate = Color( 0.407843, 0.694118, 1, 1 )
 collision_mask = 10
 script = ExtResource( 1 )
 
@@ -118,7 +119,7 @@ script = ExtResource( 1 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 14 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]

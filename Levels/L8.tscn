@@ -548,6 +548,9 @@ passThroughLayer = 4
 modHex = "#d963fa"
 story = "L8/Shrine"
 
+[node name="EKey" parent="Shrine/Animation" index="3"]
+frame = 0
+
 [node name="Sprite" parent="Shrine" index="1"]
 z_index = 0
 texture = ExtResource( 11 )
@@ -558,9 +561,6 @@ scale = Vector2( 0.7, 0.7 )
 z_index = 1
 modHex = "#68b1ff"
 story = "none"
-
-[node name="EKey" parent="Shrine2/Animation" index="3"]
-frame = 0
 
 [node name="Sprite" parent="Shrine2" index="1"]
 texture = ExtResource( 2 )
