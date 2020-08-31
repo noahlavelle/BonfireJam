@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Music/Overworld.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Music/TitleScreen.wav" type="AudioStream" id=1]
 [ext_resource path="res://Objects/Music.gd" type="Script" id=2]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]

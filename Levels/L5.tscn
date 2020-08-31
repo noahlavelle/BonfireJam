@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=2]
@@ -17,8 +17,11 @@
 [ext_resource path="res://Assets/Objects/statueCyan.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Objects/shrineGreen.png" type="Texture" id=16]
 [ext_resource path="res://Tilesets/Blue.tres" type="TileSet" id=17]
-[ext_resource path="res://Tilesets/Yellow.tres" type="TileSet" id=18]
+[ext_resource path="res://Tilesets/OneWayPlatform.tres" type="TileSet" id=18]
 [ext_resource path="res://Objects/Camera2D.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Assets/Music/Overworld.wav" type="AudioStream" id=20]
+[ext_resource path="res://MusicValues.tscn" type="PackedScene" id=21]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "WinFlag.png 0"
@@ -476,19 +479,19 @@ Level = 1
 game_save_class = ExtResource( 6 )
 
 [node name="Yellow" type="TileMap" parent="Tilemaps"]
+modulate = Color( 1, 0.858824, 0.301961, 1 )
 tile_set = ExtResource( 18 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 1638425, 0, 0, 1638426, 0, 1, 1638427, 0, 1, 1638428, 0, 1, 1638429, 0, 1, 1638430, 0, 2 )
+tile_data = PoolIntArray( 1179717, 0, 1, 1638425, 0, 0, 1638426, 0, 1, 1638427, 0, 1, 1638428, 0, 1, 1638429, 0, 1, 1638430, 0, 2 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
 position = Vector2( 672, 430 )
 limit_right = 855
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-modulate = Color( 0.407843, 0.694118, 1, 1 )
 position = Vector2( 672, 480 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -573,9 +576,6 @@ passThroughLayer = 7
 modHex = "#68f1ff"
 story = "none"
 
-[node name="EKey" parent="Statue/Animation" index="3"]
-frame = 0
-
 [node name="Sprite" parent="Statue" index="1"]
 texture = ExtResource( 15 )
 
@@ -591,9 +591,6 @@ scale = Vector2( 0.7, 0.7 )
 modHex = "#68b1ff"
 story = "none"
 
-[node name="EKey" parent="Shrine2/Animation" index="3"]
-frame = 0
-
 [node name="Sprite" parent="Shrine2" index="1"]
 texture = ExtResource( 9 )
 
@@ -604,14 +601,14 @@ speed = Vector2( 300, 500 )
 modHex = "#6eff5e"
 story = "none"
 
-[node name="EKey" parent="Shrine3/Animation" index="3"]
-frame = 0
-
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 16 )
 
 [node name="Area2D" parent="Shrine3" index="2"]
 position = Vector2( -2.1499, 1.24005 )
+
+[node name="Music" parent="." instance=ExtResource( 21 )]
+path = ExtResource( 20 )
 
 [editable path="Statue"]
 
