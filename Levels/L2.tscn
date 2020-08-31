@@ -590,13 +590,17 @@ pathToScene = "res://Levels/L3.tscn"
 [node name="ShrineY" parent="." instance=ExtResource( 3 )]
 position = Vector2( 57.2753, 462.912 )
 scale = Vector2( 0.7, 0.7 )
-modHex = "#ffe902"
+modHex = "#fff500"
 story = "L2/Shrine"
 
 [node name="ShrineB" parent="." instance=ExtResource( 3 )]
 position = Vector2( 121, 511 )
 scale = Vector2( 0.7, 0.7 )
+modHex = "#68b1ff"
 story = "none"
+
+[node name="EKey" parent="ShrineB/Animation" index="3"]
+frame = 0
 
 [node name="Sprite" parent="ShrineB" index="1"]
 texture = ExtResource( 11 )

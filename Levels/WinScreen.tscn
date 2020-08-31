@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Objects/Confetti.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Assets/Fonts/PressStart2P.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Levels/WinScreen.gd" type="Script" id=8]
 [ext_resource path="res://Objects/WinBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Music/Win.wav" type="AudioStream" id=10]
+[ext_resource path="res://MusicValues.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -100,6 +102,9 @@ position = Vector2( -32, -24 )
 
 [node name="ColorRect" parent="WinBox/CanvasLayer" index="0"]
 visible = false
+
+[node name="Music" parent="." instance=ExtResource( 11 )]
+path = ExtResource( 10 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="animation_finished" from="WinBox/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 

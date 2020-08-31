@@ -591,5 +591,5 @@ pathToScene = "res://Levels/L4.tscn"
 position = Vector2( 192, 448 )
 scale = Vector2( 0.7, 0.7 )
 passThroughLayer = 0
-modHex = "#ffe902"
+modHex = "#fff500"
 story = "L3/Shrine"

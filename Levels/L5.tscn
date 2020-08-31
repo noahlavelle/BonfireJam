@@ -484,28 +484,16 @@ format = 1
 tile_data = PoolIntArray( 1638425, 0, 0, 1638426, 0, 1, 1638427, 0, 1, 1638428, 0, 1, 1638429, 0, 1, 1638430, 0, 2 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
-position = Vector2( 48, 426 )
+position = Vector2( 672, 430 )
 limit_right = 855
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 48, 476 )
+modulate = Color( 0.407843, 0.694118, 1, 1 )
+position = Vector2( 672, 480 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 position = Vector2( 0, -50 )
 remote_path = NodePath("../../Camera2D")
-
-[node name="Statue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 253.12, 415.016 )
-scale = Vector2( 0.7, 0.7 )
-passThroughLayer = 7
-modHex = "00ffff"
-story = "none"
-
-[node name="EKey" parent="Statue/Animation" index="3"]
-frame = 0
-
-[node name="Sprite" parent="Statue" index="1"]
-texture = ExtResource( 15 )
 
 [node name="PFG" type="ParallaxBackground" parent="."]
 layer = 0
@@ -578,17 +566,29 @@ pathToScene = "res://Levels/L6.tscn"
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
-[node name="Shrine" parent="." instance=ExtResource( 3 )]
-position = Vector2( 334.145, 414.939 )
+[node name="Statue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 252, 416 )
 scale = Vector2( 0.7, 0.7 )
-modHex = "#ffe902"
+passThroughLayer = 7
+modHex = "#68f1ff"
+story = "none"
+
+[node name="EKey" parent="Statue/Animation" index="3"]
+frame = 0
+
+[node name="Sprite" parent="Statue" index="1"]
+texture = ExtResource( 15 )
+
+[node name="Shrine" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336, 416 )
+scale = Vector2( 0.7, 0.7 )
+modHex = "#fff500"
 story = "none"
 
 [node name="Shrine2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 628.837, 478.632 )
+position = Vector2( 628, 480 )
 scale = Vector2( 0.7, 0.7 )
-speed = Vector2( 600, 300 )
-modHex = "#000aff"
+modHex = "#68b1ff"
 story = "none"
 
 [node name="EKey" parent="Shrine2/Animation" index="3"]
@@ -598,10 +598,10 @@ frame = 0
 texture = ExtResource( 9 )
 
 [node name="Shrine3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 721.505, 479.132 )
+position = Vector2( 724, 480 )
 scale = Vector2( 0.7, 0.7 )
 speed = Vector2( 300, 500 )
-modHex = "#00ff1c"
+modHex = "#6eff5e"
 story = "none"
 
 [node name="EKey" parent="Shrine3/Animation" index="3"]
@@ -609,6 +609,9 @@ frame = 0
 
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 16 )
+
+[node name="Area2D" parent="Shrine3" index="2"]
+position = Vector2( -2.1499, 1.24005 )
 
 [editable path="Statue"]
 
