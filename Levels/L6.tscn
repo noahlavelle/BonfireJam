@@ -446,29 +446,33 @@ game_save_class = ExtResource( 13 )
 [node name="Waterfall" type="Node2D" parent="."]
 
 [node name="Waterfall" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 396 )
+position = Vector2( 344, 400 )
+
+[node name="Waterfall8" parent="Waterfall" instance=ExtResource( 17 )]
+position = Vector2( 344, 376 )
+z_index = 1
 
 [node name="Waterfall2" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 420 )
+position = Vector2( 344, 424 )
 
 [node name="Waterfall3" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 444 )
+position = Vector2( 344, 448 )
 
 [node name="Waterfall4" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 468 )
+position = Vector2( 344, 472 )
 
 [node name="Waterfall5" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 492 )
+position = Vector2( 344, 496 )
 
 [node name="Waterfall6" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 516 )
+position = Vector2( 344, 520 )
 
 [node name="Waterfall7" parent="Waterfall" instance=ExtResource( 17 )]
-position = Vector2( 344, 540 )
+position = Vector2( 344, 544 )
 
 [node name="Splash" parent="Waterfall" instance=ExtResource( 18 )]
-position = Vector2( 344, 548 )
-frame = 1
+position = Vector2( 344, 552 )
+frame = 2
 
 [node name="Tilemaps" type="Node" parent="."]
 
@@ -530,9 +534,6 @@ speed = Vector2( 300, -250 )
 gravity = -1000
 modHex = "#d963fa"
 story = "none"
-
-[node name="EKey" parent="Shrine/Animation" index="3"]
-frame = 1
 
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )

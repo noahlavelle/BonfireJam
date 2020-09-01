@@ -68,6 +68,8 @@ func _on_Anim_animation_finished(anim_name):
 		get_parent().add_child(statue)
 		statue.global_position = player.global_position
 		statue.modulate = player.modulate
+		statue.get_node("Sprite").flip_h = player.get_node("AnimatedSprite").flip_h
+		statue.get_node("Sprite").flip_v = player.get_node("AnimatedSprite").flip_v
 		player.modulate = modHex
 		
 		$Animation/Tween.interpolate_property(statue, "modulate", 
@@ -78,12 +80,12 @@ func _on_Anim_animation_finished(anim_name):
 		player.speed = speed
 		player.gravity = gravity
 		player.set_collision_mask(2 + passThroughLayer)
+		
+		yield(get_tree().create_timer(2), "timeout")
 		if gravity < 0:
 			player.rotation_degrees = 180
 		else:
 			player.rotation_degrees = 0
-		
-		yield(get_tree().create_timer(2), "timeout")
 		get_tree().paused = false
 		player.velocity = Vector2.ZERO
 		$Animation/Anim.play("ScaleOut")

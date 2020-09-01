@@ -522,11 +522,14 @@ pathToScene = "res://Levels/WinScreen.tscn"
 [node name="Shrine" parent="." instance=ExtResource( 3 )]
 position = Vector2( 856, 1488 )
 scale = Vector2( 0.7, 0.7 )
-speed = Vector2( 300, -300 )
+speed = Vector2( 200, -290 )
 gravity = -1000
 passThroughLayer = 4
 modHex = "#d963fa"
 story = "L8/Shrine"
+
+[node name="EKey" parent="Shrine/Animation" index="3"]
+frame = 1
 
 [node name="Sprite" parent="Shrine" index="1"]
 z_index = 0

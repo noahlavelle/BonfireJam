@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f353a530-2e9b-494f-8f19-c43df1bcc792" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/icon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/HomeScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/L2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/L2.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/L4.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/L4.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Levels/SelectScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Levels/SelectScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/LevelSelectButton.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/LevelSelectButton.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Objects/Music.gd" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Music.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export_presets.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/export_presets.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/icon.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1guH15IQytOCJ49aklI3LRbRkfP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f353a530-2e9b-494f-8f19-c43df1bcc792" name="Default Changelist" comment="" />
+      <created>1598957338905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598957338905</updated>
+      <workItem from="1598957343152" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="976" y="559" key="com.intellij.ide.util.TipDialog" timestamp="1598957351805">
+      <screen x="0" y="30" width="2560" height="1410" />
+    </state>
+    <state x="976" y="559" key="com.intellij.ide.util.TipDialog/-1920.204.1920.1050/0.30.2560.1410@0.30.2560.1410" timestamp="1598957351805" />
+  </component>
+</project>
