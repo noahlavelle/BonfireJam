@@ -11,7 +11,6 @@ func _process(delta):
 			var streamPlayer = AudioStreamPlayer.new()
 			add_child(streamPlayer)
 			streamPlayer.stream = load("res://Assets/Sounds/hover.wav")
-			streamPlayer.volume_db = 5
 			streamPlayer.play()
 			$AnimationPlayer.play("HoverIn")
 		hovered = true

@@ -10,27 +10,6 @@
 [node name="HomeScreen" type="Node2D"]
 script = ExtResource( 5 )
 
-[node name="Background" parent="." instance=ExtResource( 4 )]
-
-[node name="Sprite" parent="Background/PBG/TreesBack" index="0"]
-position = Vector2( 0, -144 )
-
-[node name="PFG" parent="Background" index="1"]
-layer = 10
-
-[node name="FrontRocks" parent="Background/PFG" index="1"]
-z_index = 4
-
-[node name="Ground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Ground"]
-motion_mirroring = Vector2( 480, 0 )
-
-[node name="Sprite" type="Sprite" parent="Ground/ParallaxLayer"]
-position = Vector2( 0, 132 )
-texture = ExtResource( 2 )
-centered = false
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 160, 90 )
 current = true
@@ -42,6 +21,7 @@ smoothing_speed = 10.0
 
 [node name="Transition" parent="Camera2D/CanvasLayer" instance=ExtResource( 3 )]
 visible = false
+z_index = 20
 script = null
 
 [node name="ColorRect" parent="Camera2D/CanvasLayer/Transition/CanvasLayer" index="0"]
@@ -136,10 +116,28 @@ stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Background" parent="." instance=ExtResource( 4 )]
+
+[node name="Sprite" parent="Background/PBG/TreesBack" index="0"]
+position = Vector2( 0, -143 )
+
+[node name="FrontRocks" parent="Background/PFG" index="1"]
+z_index = 4
+
+[node name="Ground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Ground"]
+motion_mirroring = Vector2( 480, 0 )
+
+[node name="Sprite" type="Sprite" parent="Ground/ParallaxLayer"]
+position = Vector2( 0, 132 )
+texture = ExtResource( 2 )
+centered = false
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Level Select" to="." method="_on_Level_Select_pressed"]
 
-[editable path="Background"]
-
 [editable path="Camera2D/CanvasLayer/Transition"]
+
+[editable path="Background"]

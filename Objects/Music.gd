@@ -4,6 +4,7 @@ var newVolume
 var path
 
 func _ready():
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -20)
 	var _connection = $Tween.connect("tween_completed", self, "changeTrack")
 	OS.window_fullscreen = true
 

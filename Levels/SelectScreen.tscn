@@ -12,6 +12,9 @@ script = ExtResource( 1 )
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
+[node name="PFG" parent="Background" index="1"]
+layer = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 160, 88 )
 current = true
@@ -98,5 +101,7 @@ text = "Select a Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[editable path="Background"]
 
 [editable path="Camera2D/CanvasLayer/Transition"]
