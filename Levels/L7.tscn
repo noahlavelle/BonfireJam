@@ -501,6 +501,9 @@ gravity = 100
 modHex = "#ffb300"
 story = "none"
 
+[node name="EKey" parent="Shrine/Animation" index="3"]
+frame = 1
+
 [node name="Sprite" parent="Shrine" index="1"]
 texture = ExtResource( 11 )
 
@@ -520,7 +523,7 @@ modHex = "#d963fa"
 story = "none"
 
 [node name="EKey" parent="Shrine3/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 18 )
@@ -532,7 +535,7 @@ modHex = "#fff500"
 story = "none"
 
 [node name="EKey" parent="Shrine2/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Music" parent="." instance=ExtResource( 6 )]
 

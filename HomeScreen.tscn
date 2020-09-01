@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/logo2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/ground.png" type="Texture" id=2]
@@ -6,8 +6,6 @@
 [ext_resource path="res://Objects/Background.tscn" type="PackedScene" id=4]
 [ext_resource path="res://HomeScreen.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Fonts/MenuButton.tres" type="DynamicFont" id=6]
-[ext_resource path="res://MusicValues.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/Music/TitleScreen.wav" type="AudioStream" id=8]
 
 [node name="HomeScreen" type="Node2D"]
 script = ExtResource( 5 )
@@ -16,6 +14,9 @@ script = ExtResource( 5 )
 
 [node name="Sprite" parent="Background/PBG/TreesBack" index="0"]
 position = Vector2( 0, -144 )
+
+[node name="PFG" parent="Background" index="1"]
+layer = 10
 
 [node name="FrontRocks" parent="Background/PFG" index="1"]
 z_index = 4
@@ -102,6 +103,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Level Select" type="Button" parent="Camera2D/CanvasLayer/TitleScreen"]
+margin_left = 13.0
+margin_top = 135.0
+margin_right = 179.0
+margin_bottom = 155.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/TitleScreen/Level Select"]
+margin_left = -3.0
+margin_top = 4.0
+margin_right = 189.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 6 )
+text = "Level Select"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Logo" type="TextureRect" parent="Camera2D/CanvasLayer/TitleScreen"]
 margin_left = 175.159
 margin_top = 16.0
@@ -113,11 +136,9 @@ stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Music" parent="." instance=ExtResource( 7 )]
-path = ExtResource( 8 )
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/TitleScreen/Level Select" to="." method="_on_Level_Select_pressed"]
 
 [editable path="Background"]
 

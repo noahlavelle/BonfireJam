@@ -35,7 +35,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "EXP-System-Dialog" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 

@@ -509,7 +509,7 @@ modHex = "#68f1ff"
 story = "none"
 
 [node name="EKey" parent="Statue/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Sprite" parent="Statue" index="1"]
 texture = ExtResource( 15 )
@@ -527,7 +527,7 @@ modHex = "#68b1ff"
 story = "none"
 
 [node name="EKey" parent="Shrine2/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Sprite" parent="Shrine2" index="1"]
 texture = ExtResource( 9 )
@@ -540,7 +540,7 @@ modHex = "#6eff5e"
 story = "none"
 
 [node name="EKey" parent="Shrine3/Animation" index="3"]
-frame = 0
+frame = 1
 
 [node name="Sprite" parent="Shrine3" index="1"]
 texture = ExtResource( 16 )

@@ -26,4 +26,10 @@ func _on_Continue_pressed():
 		var file = "res://Levels/L" + str(current_level) + ".tscn"
 		$Camera2D/CanvasLayer/Transition.get_node("AnimationPlayer").play("TransOut")
 		yield(get_tree().create_timer(0.4), "timeout")
-		var newScene = get_tree().change_scene(file)
+		var _newScene = get_tree().change_scene(file)
+
+
+func _on_Level_Select_pressed():
+	$Camera2D/CanvasLayer/Transition.get_node("AnimationPlayer").play("TransOut")
+	yield(get_tree().create_timer(0.4), "timeout")
+	var _newScene = get_tree().change_scene("res://Levels/SelectScreen.tscn")
